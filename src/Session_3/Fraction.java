@@ -174,6 +174,5 @@ public class Fraction {
             obj.divide(obj1.getNumerator(),obj1.getDenominator(),
                     obj2.getNumerator(),obj2.getDenominator());
         };
-
     }
 }
