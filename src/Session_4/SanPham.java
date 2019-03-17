@@ -60,6 +60,5 @@ public class SanPham {
         slcl= arrSp.get(id).getQuantity();
         return slcl;
     };
-
 }
 
