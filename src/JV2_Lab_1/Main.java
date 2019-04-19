@@ -12,16 +12,17 @@ public class Main {
             Class.forName("com.mysql.jdbc.Driver");
             //Step2:
             String URL ="jdbc:mysql://localhost:3306/t1808m1";
-            Connection conn= DriverManager.getConnection(URL,"t1808m","123456");
+            Connection conn= DriverManager.getConnection(URL,"huong","123456");
             //Step3:
             Statement statement = conn.createStatement();
+            //
             String sql = "SELECT*FROM student";
             ResultSet rs = statement.executeQuery(sql);
             while (rs.next()){
-                System.out.println("ID"+ rs.getString("id"));
-                System.out.println("Name"+ rs.getString("name"));
-                System.out.println("Age"+ rs.getString("age"));
-                System.out.println("Mark"+ rs.getString("mark"));
+                System.out.println("ID "+ rs.getString("id"));
+                System.out.println("Name "+ rs.getString("name"));
+                System.out.println("Age "+ rs.getString("age"));
+                System.out.println("Mark "+ rs.getString("mark"));
             }
             //Step4: Insert by ID
             String insert_sql = "INSERT INTO student (name,age,mark) " +
