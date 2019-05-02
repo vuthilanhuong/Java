@@ -92,6 +92,7 @@ public class phoneDAO implements DAOInterface<PhoneBook> {
             String sql = "UPDATE phoneBook\n" +
                     "SET Status = '0'\n" +
                     "WHERE id = "+phoneBook.getId()+";";
+
             try {
                 Integer result = connector.executeUpdate(sql);
 
@@ -100,7 +101,9 @@ public class phoneDAO implements DAOInterface<PhoneBook> {
                 }else {
                     System.out.println("Can Not Delete!");
                 }
-            }catch (Exception e){e.printStackTrace();}
+            }catch (Exception e){
+                e.printStackTrace();
+            }
 
 
         }catch (Exception e){e.printStackTrace();}
