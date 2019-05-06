@@ -1,7 +1,5 @@
 package JAVA2_EXAM2;
 
-import JV2_Ass_5_teacher.User;
-
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -46,8 +44,10 @@ public class BookDAO implements DAOInterface<Book> {
                 Integer result = connector.executeUpdate(sql);
                 if(result==1){
                     System.out.println("Add book Succeed!");
+                    return true;
                 }else {
                     System.out.println("Can Not Add!");
+                    return false;
                 }
             }catch (Exception e){
                 e.printStackTrace();
